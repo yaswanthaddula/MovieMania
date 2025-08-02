@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Ticket</title>
+  <link rel="stylesheet" href="css/booking.css" />
+</head>
+<body>
+  <div class="booking-container">
+    <div class="movie-details" id="movie-details">
+      <img id="movie-poster" alt="Movie Poster" />
+      <div>
+        <h2 id="movie-name"></h2>
+        <p id="movie-desc"></p>
+        <p id="movie-lang"></p>
+        <p><strong>Ticket Price:</strong> ₹<span id="ticket-price"></span></p>
+
+        <label for="show-date">Select Date:</label>
+        <input type="date" id="show-date" min="" />
+
+        <label for="theater-select">Select Theater:</label>
+        <select id="theater-select">
+          <option value="PVR Hyderabad">PVR Hyderabad</option>
+          <option value="INOX Chennai">INOX Chennai</option>
+          <option value="GVK Bangalore">GVK Bangalore</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="seat-selection">
+      <h3>Select Your Seats</h3>
+      <div class="screen">🎬 SCREEN</div>
+
+      <!-- Seat Grid -->
+      <div class="seats" id="seats-container"></div>
+
+      <p>Total Price: ₹<span id="total-price">0</span></p>
+      <button id="proceed-btn">Proceed to Payment</button>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/booking.js"></script>
+</body>
+</html>

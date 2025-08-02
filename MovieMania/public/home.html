@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - MovieMonia</title>
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+  <div class="page-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Welcome,<br><span id="userName">User</span></h2>
+      <button id="accountBtn">Account</button>
+      <button onclick="location.href='history.html'">History</button>
+      <button onclick="logout()">Logout</button>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+      <header>
+        <h1>🎬 MovieMania</h1>
+      </header>
+
+      <!-- Search + Filter -->
+      <div class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search movies..." />
+        <select id="genreSelect">
+          <option value="">All Genres</option>
+          <option value="Action">Action</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Drama">Drama</option>
+          <option value="Horror">Horror</option>
+        </select>
+      </div>
+
+      <!-- Now Showing -->
+      <h2>🎞️ Now Showing</h2>
+      <section id="moviesList" class="movies-container">
+        <!-- Movie cards -->
+      </section>
+
+      <!-- Coming Soon -->
+      <h2>🔥 Coming Soon</h2>
+      <section id="comingSoonList" class="movies-container">
+        <!-- Coming soon movies -->
+      </section>
+    </main>
+  </div>
+
+  <!-- Account Popup -->
+  <div id="accountPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h3>Your Account</h3>
+      <p><strong>Name:</strong> <span id="popupName"></span></p>
+      <p><strong>Email:</strong> <span id="popupEmail"></span></p>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+body {
+  background-color: #121212;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history-container {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #1f1f1f;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.booking-card {
+  background-color: #2c2c2c;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.booking-card h3 {
+  margin: 0 0 10px 0;
+  color: #00e676;
+}
+
+.booking-card p {
+  margin: 5px 0;
+}
+
+.view-ticket-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-ticket-btn:hover {
+  background-color: #0b7dda;
+}
+
+#home-btn {
+  margin-top: 30px;
+  background-color: #ff4c4c;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Ticket | Movie Monia</title>
+  <link rel="stylesheet" href="css/ticket.css" />
+</head>
+<body>
+  <div class="ticket-container">
+    <h1>🎟️ Your Movie Ticket</h1>
+    <div class="ticket-box">
+      <!-- Poster -->
+      <div class="poster">
+        <img id="movie-poster" alt="Movie Poster" />
+      </div>
+
+      <!-- Ticket info -->
+      <div class="ticket-info">
+        <p><strong>Movie:</strong> <span id="movie-name"></span></p>
+        <p><strong>Theater:</strong> <span id="theater-name"></span></p>
+        <p><strong>Date:</strong> <span id="show-date"></span></p>
+        <p><strong>Seats:</strong> <span id="seat-numbers"></span></p>
+        <p><strong>Total:</strong> ₹<span id="total-price"></span></p>
+        <p><strong>Email:</strong> <span id="user-email"></span></p>
+        <p><strong>Booking ID:</strong> <span id="booking-id"></span></p>
+      </div>
+
+      <!-- QR Code -->
+      <div class="qr-box">
+        <canvas id="qr-code"></canvas>
+      </div>
+    </div>
+
+    <button id="home-btn">🏠 Back to Home</button>
+    <button id="cancel-btn" style="background-color: crimson; color: white; padding: 10px; border: none; cursor: pointer; margin-top: 10px;">❌ Cancel Ticket</button>
+  </div>
+
+  <script type="module" src="scripts/ticket.js"></script>
+</body>
+</html>
