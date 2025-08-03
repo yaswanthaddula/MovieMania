@@ -1,6 +1,6 @@
 # 🎬 MovieMania – Firebase-based Movie Ticket Booking Web App
 
-MovieMania is a fully functional movie ticket booking website built with **HTML**, **CSS**, **JavaScript**, and **Firebase**. The app allows users to:
+MovieMania is a fully functional movie ticket booking platform built with **HTML**, **CSS**, **JavaScript**, and **Firebase**. The app allows users to:
 
 ✅ Register/Login  
 ✅ Browse Telugu movies  
@@ -16,126 +16,122 @@ MovieMania is a fully functional movie ticket booking website built with **HTML*
 
 ## 🌐 Live Demo
 
-🚀 [Click here to view the project live](https://movie-ticket-f4cc1.web.app/)
-
----
+🚀 [Click here to view the project live](https://movie-ticket-f4cc1.web.app)
 
 ---
 
 ## 📁 Project Folder Structure
 
-```bash
 MovieMania/
 ├── firebase.json
 ├── .firebaserc
 ├── README.md
 └── public/
-    ├── index.html
-    ├── register.html
-    ├── login.html
-    ├── home.html
-    ├── booking.html
-    ├── payment.html
-    ├── success.html
-    ├── history.html
-    ├── css/
-    │   ├── index.css
-    │   ├── register.css
-    │   ├── login.css
-    │   ├── home.css
-    │   ├── booking.css
-    │   ├── payment.css
-    │   ├── success.css
-    │   └── history.css
-    └── scripts/
-        ├── firebase-config.js
-        ├── register.js
-        ├── login.js
-        ├── home.js
-        ├── booking.js
-        ├── payment.js
-        ├── success.js
-        └── history.js
+├── index.html
+├── register.html
+├── login.html
+├── home.html
+├── booking.html
+├── payment.html
+├── success.html
+├── history.html
+├── css/
+│ ├── index.css
+│ ├── register.css
+│ ├── login.css
+│ ├── home.css
+│ ├── booking.css
+│ ├── payment.css
+│ ├── success.css
+│ └── history.css
+└── scripts/
+├── firebase-config.js
+├── register.js
+├── login.js
+├── home.js
+├── booking.js
+├── payment.js
+├── success.js
+└── history.js
+
 
 ---
 
 ## 🧰 Technologies Used
 
-- 🌐 HTML, CSS, JavaScript (Frontend)
-- 🔐 Firebase Authentication
-- 🧠 Firebase Firestore (Database)
-- ☁️ Firebase Hosting
+- 🌐 HTML, CSS, JavaScript
+- 🔥 Firebase Authentication
+- 🧾 Firebase Firestore (Database)
+- 📦 Firebase Hosting
+- 📱 Responsive UI (Dark Theme)
 
 ---
 
 ## 📸 Screenshots
 
-| 📥 Register Page | 🔐 Login Page |
+| Register        | Login           | Home Page        |
+|----------------|------------------|------------------|
+| ![](https://github.com/yaswanthaddula/MovieMania/blob/main/register.png) | ![](https://github.com/yaswanthaddula/MovieMania/blob/main/login.png) | ![](https://github.com/yaswanthaddula/MovieMania/blob/main/home.png) |
+
+| Booking Page    | Payment Page     | Success Ticket   |
+|------------------|------------------|------------------|
+| ![](https://github.com/yaswanthaddula/MovieMania/blob/main/booking.png) | ![](https://github.com/yaswanthaddula/MovieMania/blob/main/payment.png) | ![](https://github.com/yaswanthaddula/MovieMania/blob/main/success.png) |
+
+| History Page     | Ticket QR        |
 |------------------|------------------|
-| ![Register](https://raw.githubusercontent.com/yaswanthaddula/MovieMania/main/register.png) | ![Login](https://raw.githubusercontent.com/yaswanthaddula/MovieMania/main/login.png) |
-
-| 🏠 Home (Movies List) | 🎟️ Booking (Seats) |
-|------------------------|------------------------|
-| ![Home](https://raw.githubusercontent.com/yaswanthaddula/MovieMania/main/home.png) | ![Booking](https://raw.githubusercontent.com/yaswanthaddula/MovieMania/main/booking.png) |
-
-| 💳 Payment Page | ✅ Booking Success |
-|------------------|----------------------|
-| ![Payment](https://raw.githubusercontent.com/yaswanthaddula/MovieMania/main/payment.png) | ![Success](https://raw.githubusercontent.com/yaswanthaddula/MovieMania/main/success.png) |
-
-| 📜 Booking History | 🎫 Ticket with QR |
-|---------------------|---------------------|
-| ![History](https://raw.githubusercontent.com/yaswanthaddula/MovieMania/main/history.png) | ![Ticket](https://raw.githubusercontent.com/yaswanthaddula/MovieMania/main/ticket.png) |
+| ![](https://github.com/yaswanthaddula/MovieMania/blob/main/history.png) | ![](https://github.com/yaswanthaddula/MovieMania/blob/main/ticket.png) |
 
 ---
 
-## 🚀 Getting Started – Build This in 5 Steps!
+## 🚀 Installation Steps (Optional)
 
-### 1️⃣ Clone the Repository
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yaswanthaddula/MovieMania.git
+   cd MovieMania
+Set up Firebase project and update firebase-config.js with your config.
 
-```bash
-git clone https://github.com/yaswanthaddula/MovieMania.git
-cd MovieMania
-2️⃣ Create Firebase Project
-Go to Firebase Console
+Deploy using Firebase CLI:
 
-Create a project → Enable Email/Password Authentication
-
-Create a Firestore Database
-
-Go to Project Settings → Get Firebase Config
-
-3️⃣ Add Your Firebase Config
-Edit public/scripts/firebase-config.js like below:
-
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MSG_ID",
-  appId: "YOUR_APP_ID"
-};
-4️⃣ Install Firebase CLI and Deploy
-npm install -g firebase-tools
 firebase login
 firebase init
-# Choose: Hosting → Select your project → Public directory: public → SPA: Yes
 firebase deploy
-✅ That’s it! Your project is now live!
+🔒 Security Notice
+🚨 This site was previously flagged due to a publicly exposed Firebase API key.
 
-🔧 Features Summary
-Feature	Description
-🔐 Login/Register	Secure user authentication using Firebase
-🎞️ Movie List	Browse Telugu movies with posters
-🎟️ Seat Booking	Clickable seat layout with live pricing
-🏨 Theater & Date	Select theater and showtime
-💳 Mock Payment	Choose Net Banking, UPI, etc.
-✅ QR Confirmation	Booking confirmation with downloadable QR ticket
-📜 History	View past booking details for the logged-in user
+✅ The issue has been resolved:
 
+API key rotated and secured with domain + API restrictions
+
+Old key removed from GitHub
+
+Google Safe Browsing review requested on August 3, 2025
+
+⚠️ Awaiting final clearance
+
+🧠 No user data was compromised.
 
 🧠 What's Next?
 🔄 Real-time seat availability
 💳 Integrate real payment gateway (Razorpay/Stripe)
-🛠️ Admin dashboard to add movies
+🛠️ Admin dashboard to add/edit movies
 ⭐ User movie reviews and ratings
+📱 QR code scanning at theater check-in
+
+🤝 Contributing
+Contributions, suggestions, and improvements are welcome!
+Feel free to fork and submit a pull request.
+
+⭐ Star this repo if you find it helpful!
+
+👨‍💻 Developed By
+Yaswanth Addula
+🎓 B.Tech – AI & Data Science
+🏫 Saveetha School of Engineering
+
+📄 License
+This project is licensed under the MIT License.
+
+📞 Contact
+📧 Email: yaswanthofficial@gmail.com
+🔗 GitHub: @yaswanthaddula
