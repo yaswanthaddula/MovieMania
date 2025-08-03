@@ -1,0 +1,191 @@
+# 🔥 Firebase Setup Guide – Movie Ticket Booking Web App
+
+This guide explains how to set up Firebase for this project.  
+It includes **Authentication**, **Firestore**, and **Hosting**.
+
+---
+
+## ✅ Step 1: Create a Firebase Project
+
+1. Visit 👉 [https://console.firebase.google.com](https://console.firebase.google.com)
+2. Click **“Add Project”**
+3. Name it something like: `Movie Ticket Booking`
+4. Disable Google Analytics (optional)
+5. Click **Create Project**
+
+---
+
+## ✅ Step 2: Add a Web App
+
+1. In the Firebase project dashboard, click the **Web (</>) icon**
+2. Nickname it: `movie-ticket-app`
+3. Click **Register App**
+4. Copy the config snippet and paste it inside:
+
+public/scripts/firebase-config.js
+
+
+```js
+// firebase-config.js
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "your-app.firebaseapp.com",
+  projectId: "your-app",
+  storageBucket: "your-app.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+export const app = initializeApp(firebaseConfig);
+
+✅ Step 3: Enable Firebase Authentication
+In Firebase Console, go to Build → Authentication
+
+Click Get Started
+
+Under Sign-in method, enable:
+
+✅ Email/Password
+
+✅ Step 4: Enable Firestore Database
+Navigate to Build → Firestore Database
+
+Click Create Database
+
+Choose Start in test mode
+
+Select a region (e.g., asia-south1)
+
+Click Enable
+
+✅ Step 5: Create Firestore Collections
+📁 Collection: bookings
+Used to store booking history for each user.
+
+Collection Name: bookings
+
+Document ID: Use user email (e.g., user@gmail.com)
+
+Field: history (array of booking objects)
+
+🗃️ Example Document:
+{
+  "history": [
+    {
+      "movie": "Pushpa 2",
+      "date": "2025-08-05",
+      "seats": ["A1", "A2", "A3"],
+      "theater": "PVR Hyderabad",
+      "paymentMethod": "UPI",
+      "totalAmount": 450
+    },
+    {
+      "movie": "Salaar",
+      "date": "2025-08-07",
+      "seats": ["B2", "B3"],
+      "theater": "Inox Vijayawada",
+      "paymentMethod": "Net Banking",
+      "totalAmount": 300
+    }
+  ]
+}
+✅ These documents can be added manually for testing or dynamically through the app.
+
+📁 Collection: movies (optional for dynamic display)
+Stores movie details for rendering on home.html.
+
+🗃️ Example Document:
+{
+  "name": "Pushpa 2",
+  "poster": "https://example.com/posters/pushpa2.jpg",
+  "description": "The rule begins again in this thrilling sequel.",
+  "rating": 4.7,
+  "language": "Telugu",
+  "genre": "Action"
+}
+✅ You can fetch and display this data on the movie list page (home.html).
+
+✅ Step 6: Install Firebase CLI
+Make sure Node.js is installed.
+
+Install Firebase CLI globally using:
+
+npm install -g firebase-tools
+✅ Step 7: Login to Firebase
+Run this in terminal or CMD:
+
+firebase login
+✅ Step 8: Initialize Firebase in Your Project
+Navigate to your project folder:
+
+cd path/to/Movie-Ticket-Booking
+firebase init
+During setup:
+Choose: Hosting, Firestore, and Authentication (if available)
+
+Set public directory as:
+
+public
+Configure as SPA: Yes
+
+Overwrite index.html: No
+
+🔔 Note Before Deployment
+Make sure your folder structure looks like this:
+
+📁 Final Project Structure
+Movie-Ticket-Booking/
+├── .firebaserc
+├── firebase.json
+├── FIREBASE_SETUP.md           🔥 Firebase setup instructions
+├── README.md                   📘 Project overview and page explanations
+├── public/                     🌐 All frontend files go here
+│   ├── index.html              ✅ Landing Page
+│   ├── register.html           📝 New user registration
+│   ├── login.html              🔐 User login page
+│   ├── home.html               🎬 Movie listing page
+│   ├── booking.html            🪑 Theater & seat selection
+│   ├── payment.html            💳 Payment options
+│   ├── success.html            ✅ Booking confirmation
+│   ├── history.html            📜 Booking history
+│   ├── css/                    🎨 CSS styling
+│   │   ├── index.css
+│   │   ├── register.css
+│   │   ├── login.css
+│   │   ├── home.css
+│   │   ├── booking.css
+│   │   ├── payment.css
+│   │   ├── success.css
+│   │   ├── history.css
+│   ├── scripts/                🧠 JavaScript logic
+│   │   ├── firebase-config.js  🔥 Firebase configuration
+│   │   ├── register.js
+│   │   ├── login.js
+│   │   ├── home.js
+│   │   ├── booking.js
+│   │   ├── payment.js
+│   │   ├── success.js
+│   │   ├── history.js
+🛠️ After Creating All Files – Run These Commands in CMD
+Once everything is ready, deploy the app to Firebase Hosting.
+
+✅ Commands to Run
+# Navigate to your project folder
+cd path/to/Movie-Ticket-Booking
+
+# Login to Firebase
+firebase login
+
+# Initialize Firebase (if not done yet)
+firebase init
+
+# Deploy the app
+firebase deploy
+🌐 After Deployment
+Firebase will give you a live URL like:
+
+✔  Hosting URL: https://movie-ticket-app.web.app
+You can now share this link and open your website on any device.
+
