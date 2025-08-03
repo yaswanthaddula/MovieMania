@@ -1,3 +1,58 @@
+✅ 8. history.html – Booking History Page (Final Version)
+🔥 Firebase Setup:
+Booking data is read from the Firestore collection:
+
+Collection: bookings
+Document: [user's email]
+Field: history (Array of booking objects)
+👉 Ticket cancellation will update the array by removing the selected booking.
+
+📂 Path:
+/public/history.html
+
+🔍 Purpose:
+Display user's full booking history with options to:
+View the full ticket (in ticket.html)
+Cancel any booking (removes from Firestore)
+
+📄 What This Page Should Have:
+👤 Welcome message (with user’s email or name)
+
+📜 Booking list (each with):
+🎬 Movie Name
+🏟️ Theater
+🗓️ Date
+🪑 Seats
+💰 Amount Paid
+💳 Payment Method
+🔘 Buttons:
+
+✅ View Ticket → goes to ticket.html
+
+🎨 Linked Files:
+✅ CSS file: public/css/history.css
+✅ JS file: public/scripts/history.js
+
+These are already in your repository.
+⚙️ JavaScript Behavior (history.js):
+Uses Firebase Auth to get the current user
+Fetches bookings/{user.email} document
+Loops through history[] array to display each booking
+
+On "View Ticket":
+
+Saves clicked booking to localStorage as selectedTicket
+
+Redirects to ticket.html
+
+Updates the Firestore document with the new history[]
+
+💡 Developer Notes:
+Use JSON.stringify(booking) to store the full object
+Use .filter() to remove the selected booking from array
+Confirm before cancellation with a popup (confirm())
+
+💻 HTML Code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,4 +71,5 @@
 
   <script type="module" src="scripts/history.js"></script>
 </body>
+
 </html>
