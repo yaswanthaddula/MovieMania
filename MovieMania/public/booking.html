@@ -1,3 +1,61 @@
+✅ 5. booking.html – Theater & Seat Selection Page
+🔥 Firebase Setup:
+Movie selection is passed from home.html via localStorage.
+No Firestore write happens yet on this page — only selection logic.
+👉 Full data is saved after payment (in payment.html → Firestore bookings).
+
+📂 Path:
+/public/booking.html
+
+🔍 Purpose:
+Allows the user to:
+🎭 Select a theater for the movie
+📅 Pick a date
+🪑 Select available seats
+💰 See dynamic total cost based on seats selected
+🔘 Proceed to payment.html
+
+📄 What This Page Should Have:
+🎬 Selected Movie Title (fetched from localStorage)
+
+🏟️ Theater Dropdown
+Example values: PVR Hyderabad, Inox Vijayawada
+
+📅 Date Picker
+🪑 Seat Layout/Grid
+
+Allow multiple seat selection (e.g., checkboxes or clickable divs)
+💸 Price Calculation
+Total price = No. of seats × price per seat (e.g., ₹150)
+🔘 Proceed to Payment button
+
+🎨 Linked Files (Already in Repository):
+✅ CSS file: public/css/booking.css
+✅ JavaScript file: public/scripts/booking.js
+
+Already available in your repository. Just include via <link> and <script>.
+
+⚙️ JavaScript Behavior (in booking.js):
+Reads movie name from localStorage (saved from home.js)
+
+Stores:
+mail
+order Id
+Selected theater
+Date
+Chosen seats
+Total price
+
+Saves all this in localStorage before moving to payment.html
+
+💡 Developer Tips:
+Use seat IDs like A1, A2, B1, B2 for display
+Highlight selected seats with a color
+Add hover animations for seat hover
+
+Validate before continuing (at least one seat, theater, and date required)
+
+💻 HTML Code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,4 +99,5 @@
 
   <script type="module" src="scripts/booking.js"></script>
 </body>
+
 </html>
