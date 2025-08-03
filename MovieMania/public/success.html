@@ -1,3 +1,48 @@
+✅ 7. success.html – Booking Confirmation Page
+🔥 Firebase Setup:
+On this page, the final booking (stored in localStorage) is saved to Firestore inside the bookings collection under the logged-in user’s email.
+👉 This logic is handled in success.js.
+
+📂 Path:
+/public/success.html
+🔍 Purpose:
+This page confirms to the user that their ticket is successfully booked.
+
+📄 What This Page Should Have:
+✅ Success message
+
+“Your ticket has been booked successfully!”
+
+🧾 Booking details:
+Movie name
+Theater
+Date
+Selected seats
+Payment method
+Total amount
+📷 Optional: QR code or animated success tick
+
+🔁 Button: Back to Home → takes user to home.html
+
+🎨 Linked Files (Already in Repository):
+✅ CSS file: public/css/success.css
+✅ JavaScript file: public/scripts/success.js
+
+Include them using <link> and <script> in your HTML.
+
+⚙️ JavaScript Behavior (in success.js):
+Reads all booking details from localStorage
+Fetches logged-in user using Firebase Auth
+Saves booking object to Firestore under bookings/{user.email} → inside the history array
+Clears localStorage after saving
+Displays booking confirmation on screen
+
+💡 Developer Tips:
+Animate the success message (e.g., green tick with CSS)
+Add a mini summary card showing seats and amount
+Disable back button to prevent duplicate bookings
+
+💻 HTML Code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,3 +72,4 @@
   <script type="module" src="scripts/success.js"></script>
 </body>
 </html>
+
