@@ -1,3 +1,40 @@
+✅ 3. login.html – User Login Page
+🔥 Firebase Setup:
+Firebase Authentication is already configured.
+👉 For setup reference, check FIREBASE_SETUP.md.
+
+📂 Path:
+/public/login.html
+🔍 Purpose:
+This page allows existing users to sign in using their email and password.
+
+📄 What This Page Should Have:
+📧 Email input (required)
+🔐 Password input (required)
+
+🔘 Login button
+
+🔁 A link to go to register.html (for new users)
+
+❗ Area to show login errors (invalid credentials, etc.)
+
+🎨 Linked Files (Already in Repository):
+✅ CSS file: public/css/login.css
+✅ JavaScript file: public/scripts/login.js
+
+Just include them in your HTML using <link> and <script> tags.
+
+⚙️ JavaScript Behavior (in login.js):
+Reads user credentials
+Calls Firebase signInWithEmailAndPassword()
+On success → redirects to home.html
+On failure → shows appropriate error message (like invalid login)
+
+💡 Developer Notes:
+Make sure your login form has id="loginForm" so it works with login.js.
+No need to add Firebase SDK again; it’s already imported in JS files.
+
+💻 HTML Code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,4 +59,5 @@
 
   <script type="module" src="scripts/login.js"></script>
 </body>
+
 </html>
