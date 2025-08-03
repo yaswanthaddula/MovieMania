@@ -1,3 +1,61 @@
+✅ 6. payment.html – Payment Options Page
+🔥 Firebase Setup:
+No Firebase actions are performed here.
+Final booking data is collected from localStorage and passed to success.html.
+Booking is saved to Firestore only after success page.
+
+📂 Path:
+/public/payment.html
+
+🔍 Purpose:
+This page lets users choose a payment method and confirm the payment before proceeding.
+
+📄 What This Page Should Have:
+🧾 Booking Summary
+
+Movie name
+Theater name
+Selected date
+Selected seats
+Total price
+
+💳 Payment Method Options (radio buttons or tiles):
+
+✅ UPI
+✅ Net Banking (on click, show list of banks)
+✅ Debit/Credit Card
+✅ Wallet
+
+🏦 If Net Banking selected → show a dropdown of banks:
+SBI, HDFC, ICICI, Axis Bank, etc.
+
+🔘 Pay Now button → navigates to success.html
+
+🎨 Linked Files (Already in Repository):
+✅ CSS file: public/css/payment.css
+✅ JavaScript file: public/scripts/payment.js
+
+Include them in the HTML.
+JS will read booking details from localStorage.
+
+⚙️ JavaScript Behavior (in payment.js):
+Loads booking data from localStorage
+
+Shows summary on screen
+
+Detects selected payment method
+
+On “Pay Now”, saves payment method to localStorage
+
+Redirects to success.html
+
+💡 Developer Tips:
+Disable “Pay Now” until a payment method is selected
+Highlight selected method
+Use modal or expandable divs for bank options
+Keep design responsive for mobile screens
+
+💻 HTML Code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,4 +128,5 @@
 
   <script type="module" src="scripts/payment.js"></script>
 </body>
+
 </html>
