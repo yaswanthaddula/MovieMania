@@ -1,3 +1,40 @@
+✅ 2. register.html – New User Registration Page
+🔥 Firebase Setup:
+Firebase Authentication using Email/Password is already configured.
+👉 See FIREBASE_SETUP.md for complete Firebase setup steps.
+
+📂 Path:
+/public/register.html
+🔍 Purpose:
+This page allows new users to create an account using their email and password credentials.
+
+📄 What This Page Should Have:
+🧑 Name input (optional for UI)
+📧 Email input (required)
+🔐 Password input (required)
+
+✅ Confirm Password input (optional)
+🔘 A Register button
+🔁 A link to go to login.html (for already registered users)
+
+🎨 Linked Files (Available in Repository):
+✅ CSS file: public/css/register.css
+✅ JavaScript file: public/scripts/register.js
+✅ These files are already present in the repository.
+You only need to include them using <link> and <script> tags in your register.html.
+
+⚙️ JavaScript Behavior (in register.js):
+Validates the form inputs
+Calls Firebase createUserWithEmailAndPassword()
+On success → redirects to home.html
+On failure → displays error messages (like email in use, weak password, etc.)
+
+💡 Developer Notes:
+Firebase is configured in firebase-config.js and imported in register.js.
+You don’t need to repeat Firebase setup code here.
+Just make sure your form’s id is registerForm so it connects with the JS.
+
+💻 HTML Code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,3 +61,4 @@
   <script type="module" src="scripts/register.js"></script>
 </body>
 </html>
+
