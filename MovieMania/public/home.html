@@ -1,3 +1,61 @@
+✅ 4. home.html – Movie Listing Dashboard with Sidebar
+🔥 Firebase Setup:
+✅ Firebase Authentication: Used to get current user details
+
+✅ Firestore: Used to load movie data from movies collection
+👉 Refer to FIREBASE_SETUP.md for full setup.
+
+📂 Path:
+/public/home.html
+
+🔍 Purpose:
+This is the main user dashboard after login. It contains:
+
+👋 Welcome message with user name or email
+🎬 Dynamic list of movies
+
+📜 Sidebar with:
+👤 Account info
+📜 Booking History
+🔓 Logout
+
+📄 What This Page Should Have:
+✅ Left Sidebar (Fixed):
+👤 Account – Show user's name or email
+
+📜 History – Button that navigates to history.html
+🔓 Logout – Button to log out using Firebase
+
+✅ Right Side (Main Content):
+🎬 Movie Cards fetched from Firestore
+
+🖼️ Each card shows:
+Poster image
+Movie name
+Description (optional)
+Book Ticket button → leads to booking.html
+
+🎨 Linked Files (Already in Repository):
+✅ CSS file: public/css/home.css
+✅ JavaScript file: public/scripts/home.js
+
+Both files are already in your repo – just include using <link> and <script>.
+
+⚙️ JavaScript Behavior (in home.js):
+Detects logged-in user via onAuthStateChanged
+Displays user name/email in sidebar
+Handles Logout with signOut()
+Loads movie list from Firestore movies collection
+
+On clicking "Book Ticket", saves selected movie in localStorage and goes to booking.html
+
+💡 Developer Tips:
+Use a div.sidebar for navigation and a div.main-content for movie cards
+Stick sidebar to the left using CSS (position: fixed)
+Use user.displayName or user.email from Firebase Auth
+Use media queries for mobile-friendly layout
+
+💻 HTML Code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,4 +118,5 @@
 
   <script type="module" src="scripts/home.js"></script>
 </body>
+
 </html>
