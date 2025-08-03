@@ -1,3 +1,66 @@
+✅ 9. ticket.html – View Ticket Page (With Cancel Option)
+🔥 Firebase Setup:
+This page:
+
+✅ Reads selected booking from localStorage (set from history.html)
+
+✅ Deletes that booking from Firestore if the user clicks Cancel Ticket
+
+📂 Path:
+/public/ticket.html
+🔍 Purpose:
+Displays the full details of one selected ticket from history with options to:
+
+❌ Cancel the ticket → delete from Firestore
+
+🔙 Go back to home.html
+
+📄 What This Page Should Have:
+🎟️ Ticket header: “Your Movie Ticket”
+
+👤 User info (email from Firebase Auth)
+
+🧾 Booking details:
+🎬 Movie name
+🏟️ Theater
+🗓️ Date
+🪑 Seats
+💳 Payment method
+💰 Total amount
+
+🔘 Buttons:
+❌ Cancel Ticket
+🔙 Back to Home
+
+🎨 Linked Files:
+✅ CSS file: public/css/ticket.css
+✅ JS file: public/scripts/ticket.js
+
+⚙️ JavaScript Behavior (ticket.js):
+Loads selectedTicket from localStorage
+Displays booking info in the page
+Uses Firebase Auth to get the current user
+
+On "Cancel Ticket":
+
+Fetches user's bookings document from Firestore
+
+Filters out the selected booking from history[]
+
+Updates Firestore with the new array
+
+Shows success message or redirects to home.html
+
+On "Back to Home":
+
+Simply redirects to home.html
+
+💡 Developer Tips:
+Use JSON.stringify() comparison to match ticket objects accurately
+Add a confirm("Are you sure?") before deleting the ticket
+After cancellation, optionally clear localStorage.removeItem("selectedTicket")
+
+💻 HTML Code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,4 +100,5 @@
 
   <script type="module" src="scripts/ticket.js"></script>
 </body>
+
 </html>
