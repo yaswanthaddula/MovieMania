@@ -19,10 +19,7 @@
 
 🚀 [Click here to view the project](https://movie-ticket-f4cc1.web.app)
 
-⚠️ **Note:** If the browser shows a "Dangerous site" warning:  
-1. Click **“Details”**  
-2. Then click **“Visit this unsafe site”**  
-Your app will open safely. This warning is due to a now-revoked API key previously exposed on GitHub.
+
 
 ---
 
